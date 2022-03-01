@@ -1,0 +1,88 @@
+12:50:06
+SG_RESULT: 00000000
+12:50:06
+PWM_AUTO: 000e0024 pwm_ofs_auto=36 pwm_grad_auto=14
+12:50:06
+PWM_SCALE: 00000017 pwm_scale_sum=23
+12:50:06
+PWMCONF: c80d0e24 pwm_ofs=36 pwm_grad=14 pwm_freq=1 pwm_autoscale=1 pwm_autograd=1 pwm_reg=8 pwm_lim=12
+12:50:06
+DRV_STATUS: 801400c0 ola=1(OpenLoad_A!) olb=1(OpenLoad_B!) cs_actual=20 stst=1
+12:50:06
+CHOPCONF: 32030053 toff=3 hstrt=5 tbl=2 vsense=1 mres=2(64usteps) intpol=1 dedge=1
+12:50:06
+MSCURACT: 00e70056 cur_a=86 cur_b=231
+12:50:06
+MSCNT: 0000003a mscnt=58
+12:50:05
+TSTEP: 000fffff tstep=1048575
+12:50:05
+FACTORY_CONF: 0000000d fclktrim=13
+12:50:05
+IOIN: 21000041 enn=1 pdn_uart=1 version=0x21
+12:50:05
+OTP_READ: 0000000d otp_fclktrim=13
+12:50:05
+IFCNT: 00000024 ifcnt=36
+12:50:05
+GSTAT: 00000000
+12:50:05
+GCONF: 000001c4 en_spreadcycle=1 pdn_disable=1 mstep_reg_select=1 multistep_filt=1
+12:50:05
+========== Queried registers ==========
+12:50:05
+SGTHRS: 00000000
+12:50:05
+TPOWERDOWN: 00000014 tpowerdown=20
+12:50:05
+IHOLD_IRUN: 00081414 ihold=20 irun=20 iholddelay=8
+12:50:05
+SLAVECONF: 00000200 senddelay=2
+12:50:05
+========== Write-only registers ==========
+12:50:05
+DUMP_TMC STEPPER=stepper_z
+12:49:58
+SG_RESULT: 00000000
+12:49:58
+PWM_AUTO: 000e0024 pwm_ofs_auto=36 pwm_grad_auto=14
+12:49:58
+PWM_SCALE: 0000001d pwm_scale_sum=29
+12:49:58
+PWMCONF: c80d0e24 pwm_ofs=36 pwm_grad=14 pwm_freq=1 pwm_autoscale=1 pwm_autograd=1 pwm_reg=8 pwm_lim=12
+12:49:58
+DRV_STATUS: 801900c0 ola=1(OpenLoad_A!) olb=1(OpenLoad_B!) cs_actual=25 stst=1
+12:49:58
+CHOPCONF: 34030053 toff=3 hstrt=5 tbl=2 vsense=1 mres=4(16usteps) intpol=1 dedge=1
+12:49:58
+MSCURACT: 00930139 cur_a=-199 cur_b=147
+12:49:58
+MSCNT: 00000368 mscnt=872
+12:49:58
+TSTEP: 000fffff tstep=1048575
+12:49:58
+FACTORY_CONF: 0000000b fclktrim=11
+12:49:58
+IOIN: 21000240 pdn_uart=1 dir=1 version=0x21
+12:49:58
+OTP_READ: 0000000b otp_fclktrim=11
+12:49:58
+IFCNT: 0000000f ifcnt=15
+12:49:57
+GSTAT: 00000000
+12:49:57
+GCONF: 000001c4 en_spreadcycle=1 pdn_disable=1 mstep_reg_select=1 multistep_filt=1
+12:49:57
+========== Queried registers ==========
+12:49:57
+SGTHRS: 00000000
+12:49:57
+TPOWERDOWN: 00000014 tpowerdown=20
+12:49:57
+IHOLD_IRUN: 00081919 ihold=25 irun=25 iholddelay=8
+12:49:57
+SLAVECONF: 00000200 senddelay=2
+12:49:57
+========== Write-only registers ==========
+12:49:57
+DUMP_TMC STEPPER=extruder
