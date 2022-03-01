@@ -1,0 +1,162 @@
+--------------------Moonraker Log Start--------------------
+config_file: /home/pi/klipper_config/moonraker.conf
+log_file: /home/pi/klipper_logs/moonraker.log
+software_version: v0.7.1-439-gf93fed6
+python_version: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+#################### Moonraker Configuration ####################
+
+[server]
+host = 0.0.0.0
+port = 7125
+enable_debug_logging = False
+max_upload_size = 1024
+
+[file_manager]
+config_path = ~/klipper_config
+log_path = ~/klipper_logs
+enable_object_processing = False
+
+[authorization]
+cors_domains = 
+	https://my.mainsail.xyz
+	http://my.mainsail.xyz
+	http://*.local
+	http://*.lan
+trusted_clients = 
+	10.0.0.0/8
+	127.0.0.0/8
+	169.254.0.0/16
+	172.16.0.0/12
+	192.168.0.0/16
+	FE80::/10
+	::1/128
+
+[octoprint_compat]
+
+[history]
+
+[update_manager]
+refresh_interval = 168
+
+[update_manager mainsail]
+type = web
+repo = mainsail-crew/mainsail
+path = ~/mainsail
+
+#################################################################
+Unsafe Shutdown Count: 8
+
+System Info:
+
+***python***
+  version: sys.version_info(major=3, minor=7, micro=3, releaselevel='final', serial=0)
+  version_string: 3.7.3 (default, Jan 22 2021, 20:04:44)  [GCC 8.3.0]
+
+***cpu_info***
+  cpu_count: 4
+  bits: 32bit
+  processor: armv7l
+  cpu_desc: ARMv7 Processor rev 3 (v7l)
+  serial_number: 10000000e91adbe6
+  hardware_desc: BCM2711
+  model: Raspberry Pi 400 Rev 1.0
+  total_memory: 3748160
+  memory_units: kB
+
+***sd_info***
+  manufacturer_id: 03
+  manufacturer: Sandisk
+  oem_id: 5344
+  product_name: SC16G
+  product_revision: 8.0
+  serial_number: 1b4aa60b
+  manufacturer_date: 6/2019
+  capacity: 14.8 GiB
+  total_bytes: 15931539456
+
+***distribution***
+  name: Raspbian GNU/Linux 10 (buster)
+  id: raspbian
+  version: 10
+  version_parts: {'major': '10', 'minor': '', 'build_number': ''}
+  like: debian
+  codename: buster
+  release_info: {'name': 'MainsailOS', 'version_id': '0.6.1', 'codename': 'buster', 'id': 'mainsailos'}
+
+***virtualization***
+  virt_type: none
+  virt_identifier: none
+2022-03-01 00:27:11,191 [websockets.py:_process_messages()] - Websocket closed while writing: 2814702640
+2022-03-01 00:27:16,173 [websockets.py:on_close()] - Websocket Closed: ID: 2814702640 Close Code: None, Close Reason: None, Pong Time Elapsed: 44.98
+2022-03-01 10:52:18,150 [authorization.py:_check_trusted_connection()] - Trusted Connection Detected, IP: 192.168.50.91
+2022-03-01 10:52:18,153 [app.py:log_request()] - 101 GET /websocket (192.168.50.91) [_TRUSTED_USER_] 7.59ms
+2022-03-01 10:52:18,154 [websockets.py:open()] - Websocket Opened: ID: 2814087248, Proxied: True, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36 Edg/98.0.1108.56
+2022-03-01 10:52:47,320 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2022-03-01 10:52:48,580 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2022-03-01 10:52:48,833 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2022-03-01 10:52:48,834 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2022-03-01 10:52:50,111 [klippy_connection.py:_check_ready()] - Klippy ready
+2022-03-01 10:52:50,605 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2022-03-01 10:54:31,941 [app.py:log_request()] - 201 POST /server/files/upload (192.168.50.91) [_TRUSTED_USER_] 13.83ms
+2022-03-01 10:54:32,983 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2022-03-01 10:54:32,985 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Disconnected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 318, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/klippy_connection.py", line 423, in request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/klippy_connection.py", line 478, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/klippy_connection.py", line 548, in wait
+    raise self.response
+utils.ServerError: Klippy Disconnected
+2022-03-01 10:54:34,244 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2022-03-01 10:54:34,497 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2022-03-01 10:54:34,499 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2022-03-01 10:54:40,790 [klippy_connection.py:_check_ready()] - Klippy ready
+2022-03-01 10:54:41,284 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2022-03-01 10:58:43,852 [app.py:log_request()] - 201 POST /server/files/upload (192.168.50.91) [_TRUSTED_USER_] 12.87ms
+2022-03-01 10:58:44,893 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2022-03-01 10:58:44,898 [websockets.py:build_error()] - JSON-RPC Request Error: 503
+Klippy Disconnected
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 318, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/klippy_connection.py", line 423, in request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/klippy_connection.py", line 478, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/klippy_connection.py", line 548, in wait
+    raise self.response
+utils.ServerError: Klippy Disconnected
+2022-03-01 10:58:46,156 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2022-03-01 10:58:46,409 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2022-03-01 10:58:46,410 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2022-03-01 10:58:52,702 [klippy_connection.py:_check_ready()] - Klippy ready
+2022-03-01 10:58:53,198 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2022-03-01 10:59:30,877 [klippy_connection.py:_on_connection_closed()] - Klippy Connection Removed
+2022-03-01 10:59:41,680 [klippy_connection.py:_do_connect()] - Klippy Connection Established
+2022-03-01 10:59:41,933 [klippy_connection.py:_init_klippy_connection()] - Webhooks Subscribed
+2022-03-01 10:59:41,934 [klippy_connection.py:_init_klippy_connection()] - GCode Output Subscribed
+2022-03-01 11:00:23,072 [klippy_connection.py:_check_ready()] - Klippy ready
+2022-03-01 11:00:23,564 [data_store.py:_init_sensors()] - Configuring available sensors: ['heater_bed', 'extruder']
+2022-03-01 11:09:24,262 [websockets.py:build_error()] - JSON-RPC Request Error: 400
+{'message': 'No trigger on z1 after full movement', 'error': 'WebRequestError'}
+Traceback (most recent call last):
+  File "/home/pi/moonraker/moonraker/websockets.py", line 224, in execute_method
+    result = await method(conn, *args, **kwargs)
+  File "/home/pi/moonraker/moonraker/websockets.py", line 318, in func
+    user=ws.current_user))
+  File "/home/pi/moonraker/moonraker/klippy_connection.py", line 423, in request
+    return await self._request_standard(web_request)
+  File "/home/pi/moonraker/moonraker/klippy_connection.py", line 478, in _request_standard
+    return await base_request.wait()
+  File "/home/pi/moonraker/moonraker/klippy_connection.py", line 548, in wait
+    raise self.response
+utils.ServerError: {'message': 'No trigger on z1 after full movement', 'error': 'WebRequestError'}
